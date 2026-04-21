@@ -1,9 +1,13 @@
 
 import React from 'react'
 
+import AromaMain from "./views/AromaMain"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <AromaMain />
+    </div>
   )
 }
 

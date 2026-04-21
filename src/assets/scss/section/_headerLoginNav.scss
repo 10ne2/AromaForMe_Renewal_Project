@@ -1,0 +1,53 @@
+#headerLoginNav {
+    margin: 26px 21px 21px 21px;
+    font-size: 13px;
+}
+
+.headerLoginNav__inner {
+    width: 80%;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+
+        li {
+            padding: 0 12px;
+            border-right: 1px solid var(--black300);
+            cursor: pointer;
+
+            // 마지막만 다른 스타일을 준다면 last_child 사용
+            &:last-child {
+                border-right: none;
+                font-weight: bold;
+            }
+        }
+        .headerLoginNav__lang {
+            // 원래 자리에서 + absolute의 기준이 되는 거
+            position: relative;
+            
+
+            ul {
+                position: absolute;
+                // 기준을 중심으로 위치 잡기 top, left
+                top: 130%;
+                left: -8%;
+                border: 2px solid var(--black);
+                display: flex;
+                flex-direction: column;
+                font-size: 15px;
+
+                li {
+                    border-bottom: 1px solid var(--black300);
+                    border-right: none;
+                    margin: 4px;
+
+                    &:last-child {
+                        border-bottom: none;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}

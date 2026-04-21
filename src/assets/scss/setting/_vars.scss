@@ -1,0 +1,41 @@
+:root {
+    --main-font: "NanumSquare";
+  
+    --brownMain: #EDEDED;
+    --brownSub1: #DCD6CC;
+    --brownSub2: #B6AEA1;
+    --brownSub3: #938A7C;
+    --brownSub4: #3A332B;
+
+    --greenMain: #D9E0CD;
+    --greenSub1: #C0CAB0;
+    --greenSub2: #848D60;
+    --greenSub3: #636E4E;
+  
+    --white: #fff;
+    --black: #000;
+    --black100: #2b2b2b;
+    --black200: #434343;
+    --black300: #686868;
+    --black400: #e0e0e0;
+  
+    font-family: var(--main-font), sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+  
+body {
+    background-color: var(--white);
+}
