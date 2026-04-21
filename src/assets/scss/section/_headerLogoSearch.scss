@@ -1,0 +1,224 @@
+#headerLogoSearch {
+    margin: 0 auto;
+    width: 60%;
+    font-size: 13px;
+}
+
+.headerLogoSearch__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;                                                        // 세로 중앙 정렬
+
+    .headerLogoSearch__logo {
+        width: 30%;
+
+        img {
+            width: 272px;
+        }
+    }
+    .headerLogoSearch__search {
+        width: 65%;
+        height: 45px;
+        border: 2px solid var(--black);
+        position: relative;
+
+        .searchBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            input {
+                border: none;
+                width: 85%;
+                height: 30px;
+                margin: 7px;
+                margin-left: 15px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+            span {
+                display: block;
+                font-size: 18px;
+                margin-top: 7px;
+            }
+            img {
+                width: 25px;
+                height: 25px;
+                margin: 8px;
+            }
+            .searchDrop {
+                position: absolute;
+                top: 100%;
+                left: -0.3%;
+                width: 100.6%;
+                background-color: var(--white);
+                border: 2px solid var(--black);
+                display: flex;
+
+                .recent {
+                    width: 60%;
+                    color: var(--brownSub4);
+
+                    .recentTitle{
+                        font-size: 18px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 15px 15px 0 15px;
+                        font-weight: 900;
+
+                        em{
+                            font-size: 13px;
+                        }
+                    }
+                    .recentList{
+                        margin: 0 15px 10px 15px;
+                        
+                        li {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            gap: 10px;
+                            align-items: center;
+                            margin-top: 5px;
+
+                            &:hover {
+                                font-weight: bold;
+                            }
+                            
+                            span {
+                                font-size: 16px;
+                                &:nth-child(2) {                                 //nth-child는 소괄호에 사용
+                                    width: 80%;
+                                }
+                                &:nth-child(3) {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                    .footer{
+                        background-color: var(--brownSub2);
+                        width: 100%;
+                        height: 25px;
+
+                        span {
+                            font-size: 13px;
+                            padding: 4px 8px;
+                            display: flex;
+                            justify-content: end;
+                            color: var(--white);
+                        }
+                    }
+                }
+                .ad {
+                    width: 40%;
+                    background-color: var(--brownSub1);
+
+                    .adTitle {
+                        font-size: 20px;
+                        font-weight: 900;
+                        color: var(--brownSub4);
+                        margin: 15px 20px 5px 20px;
+                    }
+                    .adShow {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        width: 100%;
+                        align-items: center;
+                        padding: 5px 9px;
+
+                        .arrow {
+                            width: 23px;
+                            height: auto;
+                            margin: 0 3px;
+                            cursor: pointer;
+
+                        }
+                        .show {
+                            width: 250px;
+                            height: 230px;
+                            cursor: pointer;
+                            display: flex;
+                            overflow: hidden;                               // 이미지가 보이는 영역 때문에 hidden 필요
+                            
+                            .track {
+                                display: flex;
+                                transition: transform 0.5s ease;            // 슬라이드가 부드럽게 움직이도록 >> 애니메이션
+
+                                .slideItem {
+                                    width: 50%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-shrink: 0; 
+                                    // 요소가 줄어드는 걸 막아줘 >> 기본값은 1 >> 줄어들지 마라 : 0                        
+    
+                                    .adImg{
+                                        width: 230px;
+                                        height: 150px;
+                                        padding: 0 9px;
+    
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            margin: 0;
+                                            object-fit: cover; 
+                                            // cover : 비율 유지 꽉채우기 >> contain : 비율 유지 전체 보이기             
+                                        }
+                                    }
+                                    .adInfo {
+                                        width: 95%;
+                                        margin: auto;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        cursor: pointer;
+                                        color: var(--brownSub4);
+                                        padding-top: 10px;
+    
+                                        h3 {
+                                            font-weight: 700;
+                                        }
+                                        h2 {
+                                            font-weight: 900;
+                                            display: flex;
+                                            justify-content: end;
+                                            font-size: 19px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .page {
+                        width: 75%;
+                        margin: auto;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        gap: 5px;
+                        padding-top: 3px;
+
+                        span {
+                            display: block;
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 6px;
+                            cursor: pointer;
+                            background-color: var(--brownSub2);
+
+                            &.active {
+                                background-color: var(--brownSub3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 
-const loginNav = {
-  nav: ["로그인", "회원가입", "주문조회", "마이페이지", "고객센터", "KOREAN", "ENGLISH"]
-}
+import { loginNav } from '../constants'
 
 const HeaderLoginNav = () => {
   const [open, setOpen] = useState(false);
