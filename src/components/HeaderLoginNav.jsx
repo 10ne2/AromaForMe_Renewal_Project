@@ -6,7 +6,7 @@ const HeaderLoginNav = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section id='headerLoginNav'>
+    <nav id='headerLoginNav'>
       <div className="headerLoginNav__inner">
           <ul>
             <li>{loginNav.nav[0]}</li>
@@ -25,7 +25,7 @@ const HeaderLoginNav = () => {
             </li>
         </ul> 
       </div>
-    </section>
+    </nav>
   )
 }
 

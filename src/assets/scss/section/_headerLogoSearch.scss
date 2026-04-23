@@ -6,10 +6,7 @@
 
 .headerLogoSearch__inner {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;                                                        // 세로 중앙 정렬
+    @include flex-between;
 
     .headerLogoSearch__logo {
         width: 30%;
@@ -25,9 +22,7 @@
         position: relative;
 
         .searchBar {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include flex-between;
 
             input {
                 border: none;
@@ -65,9 +60,7 @@
 
                     .recentTitle{
                         font-size: 18px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
+                        @include flex-between;
                         margin: 15px 15px 0 15px;
                         font-weight: 900;
 
@@ -80,10 +73,9 @@
                         
                         li {
                             display: flex;
-                            flex-direction: row;
+                            align-items: center;
                             justify-content: start;
                             gap: 10px;
-                            align-items: center;
                             margin-top: 5px;
 
                             &:hover {
@@ -92,12 +84,13 @@
                             
                             span {
                                 font-size: 16px;
-                                &:nth-child(2) {                                 //nth-child는 소괄호에 사용
+                                &:nth-child(2) {
                                     width: 80%;
                                 }
                                 &:nth-child(3) {
                                     font-size: 13px;
                                 }
+                                //nth-child는 소괄호에 사용
                             }
                         }
                     }
@@ -126,11 +119,8 @@
                         margin: 15px 20px 5px 20px;
                     }
                     .adShow {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
+                        @include flex-center;
                         width: 100%;
-                        align-items: center;
                         padding: 5px 9px;
 
                         .arrow {
@@ -145,19 +135,21 @@
                             height: 230px;
                             cursor: pointer;
                             display: flex;
-                            overflow: hidden;                               // 이미지가 보이는 영역 때문에 hidden 필요
+                            overflow: hidden;
+                            // 이미지가 보이는 영역 때문에 hidden 필요
                             
                             .track {
                                 display: flex;
-                                transition: transform 0.5s ease;            // 슬라이드가 부드럽게 움직이도록 >> 애니메이션
+                                transition: transform 0.5s ease;
+                                // 슬라이드가 부드럽게 움직이도록 >> 애니메이션
 
                                 .slideItem {
                                     width: 50%;
                                     display: flex;
                                     flex-direction: column;
                                     flex-shrink: 0; 
-                                    // 요소가 줄어드는 걸 막아줘 >> 기본값은 1 >> 줄어들지 마라 : 0                        
-    
+                                    // 요소가 줄어드는 걸 막아줘 >> 기본값은 1 >> 줄어들지 마라 : 0
+
                                     .adImg{
                                         width: 230px;
                                         height: 150px;
@@ -168,7 +160,7 @@
                                             height: 100%;
                                             margin: 0;
                                             object-fit: cover; 
-                                            // cover : 비율 유지 꽉채우기 >> contain : 비율 유지 전체 보이기             
+                                            // cover : 비율 유지 꽉채우기 >> contain : 비율 유지 전체 보이기
                                         }
                                     }
                                     .adInfo {
@@ -176,7 +168,6 @@
                                         margin: auto;
                                         display: flex;
                                         flex-direction: column;
-                                        justify-content: center;
                                         cursor: pointer;
                                         color: var(--brownSub4);
                                         padding-top: 10px;

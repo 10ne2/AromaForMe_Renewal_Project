@@ -20,7 +20,7 @@ const HeaderLogoSearch = () => {
   useEffect (() => {
     const interval = setInterval(() => {          
       setIndex((prev) => (prev + 1) % searchAdText.length);  
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [index]);      
@@ -59,15 +59,16 @@ const HeaderLogoSearch = () => {
   // mousedown : 이벤트 종류 (마우스 누르는 순간) >> mouseup(마우스 뗄 때), click(눌렀다 뗀 후)
   // return : 컴포넌트가 화면에서 사라지면 cleanUp 해주는 것
 
-
   return (
-    <section id='headerLogoSearch'>
+    <div id='headerLogoSearch'>
       <div className="headerLogoSearch__inner">
         <div className='headerLogoSearch__logo'>
           <img src={logo} alt='아로마포미 로고'/>
         </div>
         <div className='headerLogoSearch__search'>
-          <div className="searchBar" onClick={() => setOpen(true)} ref={wrapperRef}>           {/*  wrapper 지정 */}
+          <div  className="searchBar"
+                onClick={() => setOpen(true)}
+                ref={wrapperRef} > {/*  wrapper 지정 */}
             <input placeholder='따뜻한 봄날의 혜택이 궁금하다면?'></input>
             <span>▼</span>
             <img src={ search } alt='돋보기 아이콘'/>
@@ -94,10 +95,16 @@ const HeaderLogoSearch = () => {
               <div className='ad'>
                 <h2 className='adTitle'>주간 특가 상품</h2>
                 <div className="adShow">
-                  <img className="arrow" src={searchAdLeftArrow} alt='광고 왼쪽 화살표' onClick={prevSlide}/>
+                  <img  className="arrow"
+                        src={searchAdLeftArrow}
+                        alt='광고 왼쪽 화살표'
+                        onClick={prevSlide} />
                   <div className="show">
-                  <div className="track" style={{ transform: `translateX(-${index * (100 / searchAdText.length)}%)` }}>
-                  {/*  translateX() : index에 따라 일정 비율씩 이동시키는 코드 >> 슬라이드 개수랑 관련 있음 */}
+                  <div  className="track"
+                        style={{ transform: `translateX(-${index * (100 / searchAdText.length)}%)` }}
+                        >
+                        {/*  translateX() : index에 따라 일정 비율씩 이동시키는 코드
+                            >> 슬라이드 개수랑 관련 있음 */}
                     {searchAdText.map((ad, key) => (
                       <div className="slideItem" key={key}>
                         <div className='adImg'>
@@ -109,13 +116,21 @@ const HeaderLogoSearch = () => {
                         </div>
                       </div>
                     ))}
+
                   </div>
                   </div>
-                  <img className="arrow"  src={searchAdRightArrow} alt='광고 오른쪽 화살표' onClick={nextSlide}/>
+                  <img  className="arrow"
+                        src={searchAdRightArrow}
+                        alt='광고 오른쪽 화살표'
+                        onClick={nextSlide}/>
                 </div>
                 <div className="page">
-                  <span className={index === 0 ? "active" : ""} onClick={() => setIndex(0)}></span>
-                  <span className={index === 1 ? "active" : ""} onClick={() => setIndex(searchAdText.length - 1)}></span>
+                  <span className={index === 0 ? "active" : ""}
+                        onClick={() => setIndex(0)}>
+                  </span>
+                  <span className={index === 1 ? "active" : ""}
+                        onClick={() => setIndex(searchAdText.length - 1)}>
+                  </span>
                 </div>
               </div>
             </div>
@@ -123,7 +138,7 @@ const HeaderLogoSearch = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
