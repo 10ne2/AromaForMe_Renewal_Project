@@ -4,51 +4,20 @@
 
 .mainAd__inner {
     position: relative;
-    
+    overflow: hidden;
+
     .mainAd__track {
-        width: 100%;
-        background-color: var(--black200);
-        height: 490px;
-        position: relative;
-        overflow: hidden;
+        height: 600px;
+        display: flex;
+        align-items: center;
         
         .slideItem {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all 0.5s ease;
-            opacity: 0;
-            width: 100%;
+            min-width: 100%;
             
-            &.center {
-                left: 50%;
-                transform: translate(-50%, -50%) scale(1);
-                width: 60%;
-                opacity: 1;
-                z-index: 3;
-            }
-            &.left {
-                left: -39%;
-                transform: translateY(-50%) scale(1);
-                width: 40%;
-                opacity: 0.5;
-                z-index: 2;
-            }
-            &.right {
-                right: -19.5%;
-                transform: translateY(-50%) scale(1);
-                width: 40%;
-                opacity: 0.5;
-                z-index: 2;
-            }
-            &.hidden {
-                opacity: 0;
-                z-index: 1;
-            }
-
             img {
-                width: 1150px;
-                height: auto;
+                width: 100vw;
+                height: 100%;
+                object-fit: contain;
                 cursor: pointer;
             }
         }
@@ -57,7 +26,7 @@
         position: absolute;
         @include flex-center;
         gap: 20px;
-        top: 80%;
+        top: 83%;
         z-index: 10;
         left: 45%;
 
