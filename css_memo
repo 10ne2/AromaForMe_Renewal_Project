@@ -1,0 +1,67 @@
+margin : 0 auto
+- 가운데 정렬                                                           마진 값 상하 0, 좌우 auto
+- 필수 조건
+    - width 값                                                          단, 100%일 경우 이미 전체로 되어있어서 적용이 안됨
+    - display : block
+
+align-itmes, justify-content
+- 필수 조건
+    - display : flex
+
+position
+- 상위(부모) : relative                                                 기준이 됨 // 기준이 없으면 화면을 기준으로 움직임
+- 하위(자식) :  absolute
+
+z-index
+- 필수 조건
+    - position (relative, absolute, fixed) 값이 있어야 함
+
+overflow : hidden
+- 자식이 부모보다 커야 의미 있음
+- 슬라이드에서 주로 사용
+
+width : %
+- 부모 기준으로 % 측정
+
+height : 100%
+- 부모 height 값이 있어야 함
+
+text-align : center
+- 필수 조건
+    - inline 요소에서만 영향 (span, img)
+
+object-fit
+- 필수 조건
+    - width, height 값 둘 다 있어야 함
+
+transform
+- 자기 자신 기준 이동 (부모 영향 x)
+
+
+flex
+- 부모 (정렬 지시)
+    - display : flex로 정렬
+    - justify-content
+        - center : 가운데
+        - space-between : 양쪽 끝
+        - space-around : 균등 간격
+- 자식 (움직이는 애들)
+    - flex : grow shrink basis
+        - grow : 얼마나 늘어날지
+        - shrink : 얼마나 줄어들지
+        - basis : 기본 크기
+    - flex : 1
+        - 남은 공간 자동 분배
+        - 형제 요소가 있어야 의미 있음
+    - flex : 0 0 200px
+        - 고정 크기 + 200px 사이즈
+
+
+-----------------------------------------------------------------------
+
+슬라이드
+
+view > track > slideItem 구조로 3대 구조로 이뤄야 함
+- view : 잘라내기
+- track : 가로 배치
+- slideItem : 크기 조정

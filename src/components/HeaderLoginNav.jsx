@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { loginNav } from '../constants'
+import { loginNav } from '../constants/headerIndex'
 
 const HeaderLoginNav = () => {
   const [open, setOpen] = useState(false);
