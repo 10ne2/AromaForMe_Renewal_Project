@@ -1,0 +1,23 @@
+.sectionTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    h2 {
+        font-size: 30px;
+        font-weight: 900;
+        margin: 0 auto;
+    }
+
+    .more {
+        display: block;
+        cursor: pointer;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: var(--black);
+        margin-top: 7px;
+    }
+}

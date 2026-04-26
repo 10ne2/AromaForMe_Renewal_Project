@@ -4,8 +4,8 @@
 }
 
 .popuTopTen__inner {
-    width: 70%;
-    margin: 70px auto;
+    width: 74%;
+    margin: 100px auto;
 
     .popuTopTen__title {
         display: flex;
@@ -33,7 +33,7 @@
         >img {
             width: 43px;
             height: 43px;
-            margin: 0 50px;
+            margin: 0 60px;
             cursor: pointer;
         }
         
@@ -49,7 +49,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: 30px 18.5px 0 18.5px;
+                    margin: 40px 22px 0 22px;
                     width: 20%;
 
                     .top {

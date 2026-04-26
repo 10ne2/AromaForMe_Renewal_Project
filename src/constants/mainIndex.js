@@ -16,6 +16,11 @@ import MainPopuTopTenImg8 from "../assets/img/mainPopuTopTenImg8.png"
 import MainPopuTopTenImg9 from "../assets/img/mainPopuTopTenImg9.png"
 import MainPopuTopTenImg10 from "../assets/img/mainPopuTopTenImg10.png"
 
+// 신제품 추천
+import mainNewRecomImg1 from "../assets/img/mainNewRecomImg1.png"
+import mainNewRecomImg2 from "../assets/img/mainNewRecomImg2.png"
+import mainNewRecomImg3 from "../assets/img/mainNewRecomImg3.png"
+import mainNewRecomImg4 from "../assets/img/mainNewRecomImg4.png"
 
 // 메인 배너
 export const mainAdImage = [mainAdImg1, mainAdImg2, mainAdImg3, mainAdImg4];
@@ -73,3 +78,31 @@ export const popuTopTen = [
     name: "쟈스민 아로마오일",
   },
 ];
+
+// 신제품 추천
+export const newRecomImg = [
+  {
+    img: mainNewRecomImg1,
+    title: "세라 마사지 오일",
+    prePrice: "140,000원",
+    price: "70,000원"
+  },
+  {
+    img: mainNewRecomImg2,
+    title: "블랙페퍼 마사지 오일",
+    prePrice: "140,000원",
+    price: "70,000원"
+  },
+  {
+    img: mainNewRecomImg3,
+    title: "유어 아로마 폼클렌징",
+    prePrice: "",
+    price: "28,000원"
+  },
+  {
+    img: mainNewRecomImg4,
+    title: "쟈스민 아로마오일",
+    prePrice: "",
+    price: "26,000원"
+  },
+]
