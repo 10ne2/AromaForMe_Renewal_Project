@@ -1,27 +1,34 @@
 #mainAd {
-    width: 100%;
+    box-sizing: border-box;
 }
 
 .mainAd__inner {
     position: relative;
-    overflow: hidden;
     
-    .mainAd__track {
-        height: 600px;
-        display: flex;
-        align-items: center;
+    .mainAd__view {
+        width: 100%;
+        overflow: hidden;
         
-        .slideItem {
-            min-width: 100%;
-            
-            img {
-                width: 100vw;
-                height: 100%;
-                object-fit: contain;
-                cursor: pointer;
+        .mainAd__track {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .slideItem {
+                width: 100%;
+                flex: 0 0 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                    display: block;
+                }
             }
         }
     }
+
     .mainAd__arrow {
         position: absolute;
         @include flex-center;
@@ -42,9 +49,11 @@
                 width: 20px;
                 height: auto;
             }
+
             .left {
                 margin-right: 5px;
             }
+
             .right {
                 margin-left: 5px;
             }

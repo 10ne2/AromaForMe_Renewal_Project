@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 
 import MainPopuTopTenLeft from "../assets/img/mainPopuTopTenLeft.png"
@@ -17,12 +18,13 @@ const MainPopuTopTen = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setPage((prev) => prev + 1);
-    }, 7000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, []);                                           // 빈 배열은 한 번만 실행
 
   // 마지막 페이지에서 첫 페이지로 이동
+
   useEffect(() => {
     if (page === maxPage) {                         // 현 페이지가 마지막 페이지일 경우 (transition이 끝난 후 실행)
       setTimeout(() => {                            // ✨setTimeout (실행함수, 시간) : 일정 시간 뒤에 코드를 실행
@@ -34,6 +36,7 @@ const MainPopuTopTen = () => {
         });
       }, 500);                                      // transition 시간과 맞추기
     }
+    // eslint-disable-next-line
   }, [page]);                                       // 실행 조건 : page => 페이지가 변경될 때 실행
 
   // 다음 버튼
@@ -53,16 +56,21 @@ const MainPopuTopTen = () => {
           <h2>인기 상품 Top 10</h2>
           <span className='line'></span>
         </div>
-
-        <div className="popuTopTen__product">
+        <div className="popuTopTen__arrow">
           <img src={MainPopuTopTenLeft}
             alt='왼쪽 방향키'
             onClick={prevSlice}
           />
+          <img src={MainPopuTopTenRight}
+            alt='오른쪽 방향키'
+            onClick={nextSlice}
+          />
+        </div>
+        <div className="popuTopTen__product">
           <div className="view">
             <div className="track"
               style={{
-                transform: `translateX(-${page * 100}%)`,                                 // 페이지 수만큼 화면 이동
+                transform: `translateX(-${page * 104.7}%)`,                                 // 페이지 수만큼 화면 이동
                 transition: isTransition ? "transform 0.5s ease" : "none"                 // 애니메이션 활성화 시 css 적용
               }}>
               {loopData.map((pop, key) => (
@@ -78,10 +86,6 @@ const MainPopuTopTen = () => {
               ))}
             </div>
           </div>
-          <img src={MainPopuTopTenRight}
-            alt='오른쪽 방향키'
-            onClick={nextSlice}
-          />
         </div>
       </div>
     </div>

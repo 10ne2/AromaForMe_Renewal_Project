@@ -1,0 +1,52 @@
+#footerInfo {
+    width: 100%;
+    background-color: #F2F4ED;
+}
+
+.footerInfo__inner {
+    width: 60%;
+    margin: 0 auto;
+    @include flex-between;
+    padding: 40px 0;
+
+    .footerInfo__com {
+        width: 75%;
+        @include flex-between;
+
+        .logo {
+            width: 15%;
+            height: 15%;
+            cursor: pointer;
+        }
+        .companyInfo {
+            width: 80%;
+
+            span {
+                display: block;
+                color: var(--black300);
+            }
+        }
+    }
+    .footerInfo__cus {
+        width: 25%;
+        height: 100%;
+
+        h3 {
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        h1 {
+            font-weight: 900;
+        }
+        span {
+            display: block;
+            color: var(--black300);
+
+            &:nth-child(3) {
+                margin-top: -8px;
+                margin-bottom: 10px;
+                font-size: 15px;
+            }
+        }
+    }
+}

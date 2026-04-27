@@ -53,6 +53,7 @@
                 background-color: var(--white);
                 border: 2px solid var(--black);
                 display: flex;
+                z-index: 1;
 
                 .recent {
                     width: 60%;

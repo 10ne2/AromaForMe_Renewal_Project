@@ -2,18 +2,19 @@
     width: 100%;
 }
 
-.info {
+.mainProinfo {
     width: 100%;
-    height: 130px;
+    height: 150px;
     background-color: var(--brownSub1);
     padding: 13px;
 
-    .name {
+    .mainProname {
         font-weight: 700;
-        height: 50%;
+        height: 70px;
+        word-break: keep-all;
     }
 
-    .prePrice {
+    .mainProprePrice {
         display: block;
         height: 17%;
         font-size: 13px;
@@ -24,12 +25,12 @@
     >div {
         @include flex-between;
 
-        .price {
+        .mainProprice {
             font-weight: 900;
             font-size: 22px;
         }
 
-        .cart {
+        .mainProcart {
             width: 35px;
             height: 35px;
             background-color: var(--white);

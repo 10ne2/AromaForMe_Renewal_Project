@@ -16,9 +16,9 @@ import MainBestRecom from "../components/MainBestRecom"
 import MainSubAd3 from "../components/MainSubAd3"
 import MainPopuTag from "../components/MainPopuTag"
 
-// import Footer from "../components/Footer"
-// import FooterNav from "../components/FooterNav"
-// import FooterInfo from "../components/FooterInfo"
+import Footer from "../components/Footer"
+import FooterNav from "../components/FooterNav"
+import FooterInfo from "../components/FooterInfo"
 
 const HomeView = () => {
   return (
@@ -39,10 +39,10 @@ const HomeView = () => {
          <MainSubAd3 />
          <MainPopuTag />
       </Main>
-      {/* <Footer>
+      <Footer>
         <FooterNav />
         <FooterInfo />
-      </Footer> */}
+      </Footer>
     </div>
   )
 }
