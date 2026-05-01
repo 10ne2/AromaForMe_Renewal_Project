@@ -149,6 +149,7 @@
                                     display: flex;
                                     flex-direction: column;
                                     flex-shrink: 0; 
+                                    margin-top: 0;
                                     // 요소가 줄어드는 걸 막아줘 >> 기본값은 1 >> 줄어들지 마라 : 0
 
                                     .adImg{
@@ -157,10 +158,8 @@
                                         padding: 0 9px;
     
                                         img {
-                                            width: 100%;
-                                            height: 100%;
+                                            @include fit-cover;
                                             margin: 0;
-                                            object-fit: cover; 
                                             // cover : 비율 유지 꽉채우기 >> contain : 비율 유지 전체 보이기
                                         }
                                     }

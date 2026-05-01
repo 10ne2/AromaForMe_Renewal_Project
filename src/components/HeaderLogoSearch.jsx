@@ -6,6 +6,7 @@ import searchAdLeftArrow from "../assets/img/searchAdLeftArrow.png"
 import searchAdRightArrow from "../assets/img/searchAdRightArrow.png"
 
 import { searchText, searchAdText } from "../constants/headerIndex"
+import { Link } from 'react-router-dom'
 
 const HeaderLogoSearch = () => {
 
@@ -49,9 +50,9 @@ const HeaderLogoSearch = () => {
   return (
     <div id='headerLogoSearch'>
       <div className="headerLogoSearch__inner">
-        <div className='headerLogoSearch__logo'>
+        <Link to="/" className='headerLogoSearch__logo'>
           <img src={logo} alt='아로마포미 로고' />
-        </div>
+        </Link>
         <div className='headerLogoSearch__search'>
           <div className="searchBar"
             onClick={() => setOpen(true)}

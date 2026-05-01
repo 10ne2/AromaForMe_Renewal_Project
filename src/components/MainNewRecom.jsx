@@ -29,6 +29,7 @@ const MainNewRecom = () => {
                 title={newRecom.title}
                 prePrice={newRecom.prePrice}
                 price={newRecom.price}
+                color="var(--brownSub1)"
               />
             </div>
           ))}

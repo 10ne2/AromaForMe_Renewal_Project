@@ -1,6 +1,7 @@
 import React from 'react'
 
 import logo from '../assets/img/footerLogo.png'
+import { Link } from 'react-router-dom'
 
 const companyInfo = [
   "회사명 : (주)유어바디 l 상표명 : 아로마포미 l 사업자등록번호 : 129-81-69667",
@@ -26,9 +27,9 @@ const FooterInfo = () => {
     <div id='footerInfo'>
       <div className="footerInfo__inner">
         <div className="footerInfo__com">
-          <div className="logo">
+          <Link to="/" className="logo">
             <img src={logo} alt='로고' />
-          </div>
+          </Link>
           <div className="companyInfo">
             <span>{companyInfo[0]}</span>
             <span>{companyInfo[1]}</span>

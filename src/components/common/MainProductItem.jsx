@@ -2,13 +2,14 @@ import React from 'react'
 
 import cart from "../../assets/img/cart.png"
 
-const MainProductItem = ({img, title, prePrice, price}) => {
+const MainProductItem = ({ img, title, prePrice, price, color }) => {
     return (
         <div>
             <div className="mainProimg">
                 <img src={img} alt='상품이미지' />
             </div>
-            <div className="mainProinfo">
+            <div className="mainProinfo"
+                style={{ "--bg": color }}>
                 <h3 className='mainProname'>{title}</h3>
                 <span className='mainProprePrice'>{prePrice}</span>
                 <div className="">

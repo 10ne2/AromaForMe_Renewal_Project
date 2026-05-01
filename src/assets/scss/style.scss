@@ -17,6 +17,10 @@
 @import "section/headerLoginNav";
 @import "section/headerLogoSearch";
 @import "section/headerMainNav";
+@import "section/list";
+@import "section/listCategory";
+@import "section/listPopu";
+@import "section/listProduct";
 @import "section/main";
 @import "section/mainAd";
 @import "section/mainBestRecom";
@@ -32,3 +36,4 @@
 // common
 @import "common/mainSectionTitleMore";
 @import "common/mainProductItem";
+@import "common/topTenItem";

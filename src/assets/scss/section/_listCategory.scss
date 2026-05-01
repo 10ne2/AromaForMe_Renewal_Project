@@ -1,0 +1,128 @@
+#listCategory {
+    width: 100vw;
+    background-color: var(--white);
+}
+
+.listCategory__inner {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    .listCategory__category {
+        display: flex;
+        gap: 12px;
+
+        .drop {
+            border: 1px solid var(--black);
+            width: 120px;
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 5px 0 5px;
+
+            span {
+                display: block;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .listCategory__brand {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+
+        .cate {
+            width: 17%;
+            padding-right: 30px;
+
+            h2 {
+                font-size: 30px;
+                font-weight: 900;
+            }
+
+            .line {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: var(--black);
+                margin: 28px 0;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                li {
+                    font-size: 18px;
+                    font-weight: 700;
+                    cursor: pointer;
+
+                    &:hover {
+                        font-weight: 900;
+                    }
+                }
+            }
+
+        }
+
+        .board {
+            width: 83%;
+            position: relative;
+
+            .arrow {
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                gap: 23px;
+
+                .button {
+                    width: 50px;
+                    height: 50px;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    border-radius: 60px;
+                    padding: 16px 14px;
+
+                    img {
+                        width: 16px;
+                        height: auto;
+                    }
+
+                    .right {
+                        margin-left: 5px;
+                    }
+                }
+
+                >span {
+                    font-size: 20px;
+                }
+            }
+
+            .view {
+                width: 100%;
+                height: 360px;
+                border: 1px solid var(--black300);
+                overflow: hidden;
+
+                .track {
+                    height: 100%;
+                    display: flex;
+
+                    .item {
+                        flex: 0 0 100%;
+
+                        img {
+                            @include fit-cover;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

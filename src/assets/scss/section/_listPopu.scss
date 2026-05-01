@@ -1,0 +1,52 @@
+#listPopu {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.listPopu__inner {
+
+    h2 {
+        font-size: 30px;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+    }
+
+    .listPopu__product {
+        position: relative;
+        margin-top: 40px;
+
+        .arrow {
+            position: absolute;
+            display: flex;
+            top: 40%;
+            left: -90px;
+            width: 300px;
+            z-index: 1;
+            gap: 1240px;
+
+            img {
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+            }
+        }
+
+        .show {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            .track {
+                width: 100%;
+                height: 100%;
+                display: flex;
+
+                .item {
+                    flex: 0 0 calc(100% / 5);
+                }
+            }
+        }
+    }
+}

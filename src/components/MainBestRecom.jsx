@@ -9,6 +9,7 @@ import pay from "../assets/img/pay.png"
 import { bestRecomImg } from "../constants/mainIndex"
 
 const MainBestRecom = () => {
+
   return (
     <div id='bestRecom'>
       <div className="bestRecom__inner">
@@ -29,6 +30,7 @@ const MainBestRecom = () => {
                 title={best.title}
                 prePrice={best.prePrice}
                 price={best.price}
+                color="var(--brownSub1)"
               />
             </div>
           ))}

@@ -5,6 +5,7 @@ import MainPopuTopTenLeft from "../assets/img/mainPopuTopTenLeft.png"
 import MainPopuTopTenRight from "../assets/img/mainPopuTopTenRight.png"
 
 import { popuTopTen } from "../constants/mainIndex"
+import TopTenItem from './common/TopTenItem'
 
 const MainPopuTopTen = () => {
 
@@ -18,7 +19,7 @@ const MainPopuTopTen = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setPage((prev) => prev + 1);
-    }, 20000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);                                           // 빈 배열은 한 번만 실행
@@ -70,19 +71,17 @@ const MainPopuTopTen = () => {
           <div className="view">
             <div className="track"
               style={{
-                transform: `translateX(-${page * 104.7}%)`,                                 // 페이지 수만큼 화면 이동
+                transform: `translateX(-${page * 100}%)`,                                 // 페이지 수만큼 화면 이동
                 transition: isTransition ? "transform 0.5s ease" : "none"                 // 애니메이션 활성화 시 css 적용
               }}>
               {loopData.map((pop, key) => (
-                <div className="slideItem" key={key}>
-                  <div className="top">
-                    <span>{pop.num}</span>
-                  </div>
-                  <div className="proImg">
-                    <img src={pop.img} alt='상품이미지' />
-                  </div>
-                  <h3 className='name'>{pop.name}</h3>
-                </div>
+                <TopTenItem 
+                  key={key}
+                  className="item"
+                  num={pop.num}
+                  img={pop.img}
+                  name={pop.name}
+                />
               ))}
             </div>
           </div>
