@@ -68,12 +68,12 @@ const HeaderLogoSearch = () => {
                   </h3>
                   <ul className='recentList'>
                     {searchText.map((search, key) => (
-                      <li key={key}>
+                      <Link to="/detail" className="recentItem" key={key}>
                         <span>{key + 1}.</span>
                         <span>{search.name}</span>
                         <span>{search.date}</span>
                         <span>X</span>
-                      </li>
+                      </Link>
                     ))}
                   </ul>
                   <div className="footer">

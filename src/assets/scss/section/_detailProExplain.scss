@@ -1,0 +1,555 @@
+#proExplain {
+    width: 100vw;
+    color: var(--black200);
+    font-size: 18px;
+
+    .methodDesc {
+        margin: 40px auto;
+        width: 90%;
+        text-align: center;
+
+        span {
+            line-height: 35px;
+            font-size: 18px;
+        }
+    }
+
+    .bold {
+        font-weight: 900;
+    }
+
+    .brown {
+        color: var(--brownSub6);
+    }
+
+    .green {
+        color: var(--greenSub3);
+    }
+
+    .none {
+        display: none;
+    }
+
+    .line {
+        @include line;
+        margin-top: 20px;
+    }
+
+    .first {
+        margin-left: 10px;
+    }
+
+    img {
+        @include fit-cover;
+    }
+}
+
+.proExplain__inner {
+    width: 100%;
+
+    .proExplain__top {
+        width: 100%;
+
+        .proExplain__top__inner {
+            @include center60;
+
+            .proExplain__incense {
+                padding-top: 150px;
+
+                h2 {
+                    text-align: center;
+                    font-size: 40px;
+                    font-weight: 700;
+
+                    em {
+                        font-size: 50px;
+                        font-weight: 900;
+                        color: var(--greenSub3);
+                    }
+                }
+
+                >span {
+                    @include span-center;
+                    margin: 10px 0 40px 0;
+                    font-size: 20px;
+                }
+
+                .wideImg {
+                    width: 100%;
+                    height: 350px;
+                    margin-bottom: 80px;
+
+                    img {
+                        @include fit-cover;
+                    }
+                }
+
+                .incense {
+                    .incenseCategory {
+                        display: flex;
+                        gap: 30px;
+
+                        .incenItem {
+                            width: 100%;
+                            height: 350px;
+                            position: relative;
+                            cursor: pointer;
+
+                            img {
+                                @include fit-cover;
+                            }
+
+                            .opacity {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background-color: var(--black);
+                                opacity: 0%;
+                                transition: opacity 0.5s ease;
+                            }
+
+                            .name {
+                                position: absolute;
+                                top: 8%;
+                                left: 8%;
+                                font-size: 30px;
+                                font-weight: 700;
+                                transition: color 0.5s ease;
+                            }
+
+                            .desc {
+                                @include position-center;
+                                font-size: 25px;
+                                font-weight: 700;
+                                display: none;
+                                color: var(--white);
+                                transition: display 0.5s ease;
+                            }
+
+                            &:hover .desc {
+                                display: block;
+                            }
+
+                            &:hover .name {
+                                color: var(--white);
+                            }
+
+                            &:hover .opacity {
+                                opacity: 50%;
+                            }
+                        }
+                    }
+
+                    .incenseExplain {
+                        width: 100%;
+                        padding: 40px;
+                        background-color: #D9E0CD;
+                        margin-top: 30px;
+                        border-top: 2px solid var(--greenSub2);
+                        border-bottom: 2px solid var(--greenSub2);
+
+                        >span {
+                            line-height: 2;
+                            color: var(--black200);
+                        }
+                    }
+                }
+            }
+
+            .proExplain__relax {
+                margin-top: 100px;
+
+                h2 {
+                    text-align: center;
+                    font-size: 40px;
+                    font-weight: 700;
+
+                    em {
+                        font-size: 50px;
+                        font-weight: 900;
+                        color: var(--brownSub6);
+                    }
+                }
+
+                .relaxItem {
+                    display: flex;
+                    gap: 60px;
+                    margin-top: 50px;
+
+                    .item {
+                        position: relative;
+
+                        >h2 {
+                            position: absolute;
+                            margin-top: -14px;
+                            font-size: 50px;
+                        }
+
+                        .imgBox {
+                            width: 74%;
+                            margin: 0 auto;
+                            height: 260px;
+
+                            >img {
+                                @include fit-cover;
+                            }
+                        }
+
+                        .name {
+                            @include span-center;
+                            font-size: 25px;
+                            font-weight: 900;
+                            color: var(--brownSub6);
+                            margin: 25px 0 15px 0;
+                        }
+
+                        .desc {
+                            @include span-center;
+                            width: 90%;
+                            margin: 0 auto;
+                            color: var(--black200);
+                            line-height: 1.8;
+                        }
+                    }
+                }
+            }
+
+            .proExplain__plant {
+                margin-top: 100px;
+
+                h2 {
+                    text-align: center;
+                    font-size: 40px;
+                    font-weight: 700;
+
+                    em {
+                        font-size: 50px;
+                        font-weight: 900;
+                        color: var(--greenSub3);
+                    }
+                }
+
+                .plantItem {
+                    width: 95%;
+                    margin: 20px auto 0 auto;
+
+                    .item {
+                        display: flex;
+                        gap: 30px;
+                        margin-top: 30px;
+
+                        h2 {
+                            width: 5%;
+                            font-size: 60px;
+                            font-weight: 900;
+                            color: var(--greenSub3);
+                        }
+
+                        .descList {
+                            width: 95%;
+                            margin-top: 15px;
+
+                            h3 {
+                                font-size: 23px;
+                                font-weight: 900;
+                                color: var(--greenSub3);
+                            }
+
+                            .desc {
+                                margin-top: 10px;
+
+                                span {
+                                    color: var(--black200);
+                                    line-height: 42px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .proExplain__history {
+                margin-top: 100px;
+
+                h2 {
+                    text-align: center;
+                    font-size: 40px;
+                    font-weight: 700;
+
+                    em {
+                        font-size: 50px;
+                        font-weight: 900;
+                        color: var(--greenSub3);
+                    }
+                }
+
+                .body {
+                    width: 95%;
+                    margin: 50px auto 0 auto;
+
+                    .teaHistoryBody {
+                        display: flex;
+                        gap: 30px;
+                        margin-bottom: 100px;
+
+                        .teaTreeDesc {
+                            width: 60%;
+
+                            span {
+                                color: var(--black200);
+                                line-height: 42px;
+                            }
+
+                            .word {
+                                font-size: 30px;
+                                font-weight: 900;
+                                color: var(--greenSub3);
+                                margin-left: 10px;
+                            }
+                        }
+
+                        .teaTreeImgSize {
+                            width: 40%;
+                            height: 230px;
+
+                            img {
+                                @include fit-cover;
+                            }
+                        }
+                    }
+
+                    .sevenHistoryBody {
+                        display: flex;
+                        gap: 30px;
+                        margin-bottom: 100px;
+
+                        .sevenDesc {
+                            width: 55%;
+
+                            span {
+                                color: var(--black200);
+                                line-height: 42px;
+                            }
+
+                            .word {
+                                font-size: 30px;
+                                font-weight: 900;
+                                color: var(--brownSub5);
+                                display: block;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .sevenImgSize {
+                            width: 45%;
+                            height: 380px;
+
+                            img {
+                                @include fit-cover;
+                            }
+                        }
+                    }
+
+                    .nineHistoryBody {
+                        display: flex;
+                        gap: 30px;
+                        margin-bottom: 100px;
+
+                        .nineDesc {
+                            width: 55%;
+
+                            span {
+                                color: var(--black200);
+                                line-height: 42px;
+                            }
+
+                            .word {
+                                font-size: 30px;
+                                font-weight: 900;
+                                color: var(--brownSub5);
+                                display: block;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .nineImgSize {
+                            width: 45%;
+                            height: 620px;
+
+                            img {
+                                @include fit-cover;
+                            }
+                        }
+                    }
+
+                    .modernHistoryBody {
+                        display: flex;
+                        gap: 30px;
+                        margin-bottom: 80px;
+
+                        .modernDesc {
+
+                            span {
+                                color: var(--black200);
+                                line-height: 42px;
+                            }
+
+                            .word {
+                                font-size: 30px;
+                                font-weight: 900;
+                                color: var(--brownSub5);
+                                display: block;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .proExplain__bottom {
+        width: 100%;
+        background-color: var(--brownMain);
+
+        .proExplain__bottom__inner {
+            @include center60;
+
+
+            .proExplain__oil {
+                padding-top: 150px;
+
+                .title {
+                    margin-bottom: 100px;
+
+                    h2 {
+                        text-align: center;
+                        font-size: 40px;
+                        font-weight: 700;
+                        margin-bottom: 12px;
+                    }
+
+                    >span {
+                        @include span-center;
+                        line-height: 35px;
+                    }
+                }
+
+                .oil {
+
+                    >h2 {
+                        text-align: center;
+                        font-size: 30px;
+
+                        .aroma {
+                            color: var(--greenSub2);
+                            font-weight: 900;
+                        }
+
+                        .underLine {
+                            text-decoration: underline;
+                            text-decoration-thickness: 5px;
+                            text-underline-offset: 8px;
+                        }
+
+                        .greenLine {
+                            text-decoration-color: var(--greenSub2);
+                        }
+
+                        .brownLine {
+                            text-decoration-color: var(--brownSub5);
+                        }
+                    }
+                }
+
+                .graph {
+                    @include flex-center;
+                    gap: 20px;
+                    width: 80%;
+                    margin: 60px auto;
+
+                    .graphImgSize {
+                        width: 45%;
+                        height: 350px;
+
+                        img {
+                            @include fit-cover;
+                        }
+                    }
+
+                    .oilDesc {
+                        width: 55%;
+
+                        span {
+                            line-height: 35px;
+                            font-size: 18px;
+                        }
+
+                        .green {
+                            font-weight: 900;
+                        }
+
+                        .brown {
+                            font-weight: 900;
+                        }
+
+                    }
+                }
+
+                .lastDesc {
+                    text-align: center;
+
+                    span {
+                        line-height: 35px;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .proExplain__oilMethod {
+                margin-top: 100px;
+                padding-bottom: 100px;
+
+                .item {
+                    margin-top: 80px;
+
+                    .title {
+                        display: flex;
+                        gap: 20px;
+
+                        h2 {
+                            font-size: 30px;
+                            font-weight: 700;
+
+                            &:nth-child(1) {
+                                font-size: 55px;
+                                font-weight: 900;
+                            }
+
+                            &:nth-child(2) {
+                                margin-top: 22px;
+                            }
+                        }
+                    }
+
+                    .itemImgSize {
+                        margin-top: 30px;
+                        height: 450px;
+
+                        img {
+                            @include fit-cover;
+                        }
+                    }
+
+                    .arrow {
+                        width: 80px;
+                        height: 80px;
+                        margin: 0 auto;
+                    }
+
+                }
+            }
+        }
+    }
+}

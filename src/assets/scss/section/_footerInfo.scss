@@ -1,11 +1,15 @@
 #footerInfo {
     width: 100%;
     background-color: #F2F4ED;
+
+    span {
+        display: block;
+        color: var(--black300);
+    }
 }
 
 .footerInfo__inner {
-    width: 60%;
-    margin: 0 auto;
+    @include center60;
     @include flex-between;
     padding: 40px 0;
 
@@ -21,10 +25,6 @@
         .companyInfo {
             width: 80%;
 
-            span {
-                display: block;
-                color: var(--black300);
-            }
         }
     }
     .footerInfo__cus {
@@ -39,8 +39,6 @@
             font-weight: 900;
         }
         span {
-            display: block;
-            color: var(--black300);
 
             &:nth-child(3) {
                 margin-top: -8px;

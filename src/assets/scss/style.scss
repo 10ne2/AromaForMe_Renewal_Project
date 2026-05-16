@@ -7,11 +7,13 @@
 @import "setting/mixin";
 
 // section
+@import "section/detailCategory";
 @import "section/detailInfo";
 @import "section/detailNote";
 @import "section/detailProExplain";
+@import "section/detailRecomPro";
 @import "section/detailReview";
-@import "section/detailSupport";
+@import "section/detailInquiry";
 @import "section/footerInfo";
 @import "section/footerNav";
 @import "section/headerLoginNav";
@@ -37,3 +39,5 @@
 @import "common/mainSectionTitleMore";
 @import "common/mainProductItem";
 @import "common/topTenItem";
+@import "common/miniCategory";
+@import "common/checkBox";

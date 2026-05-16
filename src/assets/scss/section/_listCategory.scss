@@ -4,27 +4,8 @@
 }
 
 .listCategory__inner {
-    width: 60%;
-    margin: 0 auto;
+    @include center60;
     padding: 30px 0;
-
-    .listCategory__category {
-        display: flex;
-        gap: 12px;
-
-        .drop {
-            border: 1px solid var(--black);
-            width: 120px;
-            display: flex;
-            justify-content: space-between;
-            padding: 2px 5px 0 5px;
-
-            span {
-                display: block;
-                font-size: 15px;
-            }
-        }
-    }
 
     .listCategory__brand {
         margin: 0 auto;

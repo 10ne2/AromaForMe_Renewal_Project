@@ -2,8 +2,7 @@
     margin-top: 100px;
 }
 .bestRecom__inner {
-    width: 60%;
-    margin: 0 auto;
+    @include center60;
     
     .bestRecom__product {
         width: 100%;

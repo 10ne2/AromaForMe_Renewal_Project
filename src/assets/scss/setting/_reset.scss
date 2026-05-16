@@ -99,3 +99,9 @@ img {
 #skip a:active {
     top: 10px;
 }
+
+span,
+h3 {
+    white-space: pre-line;
+    word-break: keep-all;
+}

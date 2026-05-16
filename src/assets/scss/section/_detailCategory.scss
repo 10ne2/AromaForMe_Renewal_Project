@@ -1,0 +1,26 @@
+.detailCategory__inner {
+    width: 100vw;
+    background-color: #ddd6cc;
+    
+    ul {
+        @include center60;
+        @include flex-center;
+        gap: 230px;
+        
+        li {
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 900;
+            }
+
+            &.active {
+                font-weight: 900;
+            }
+        }
+    }
+}

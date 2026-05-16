@@ -1,6 +1,5 @@
 #mainTag {
-    width: 60%;
-    margin: 0 auto;
+    @include center60;
     margin-top: 150px;
 }
 

@@ -3,8 +3,7 @@
 }
 
 .typeRecom__inner {
-    width: 60%;
-    margin: 0 auto;
+    @include center60;
     position: relative;
 
     .typeRecom__arrow {
@@ -113,7 +112,7 @@
         @include flex-center;
         gap: 8px;
 
-        > div {
+        >div {
             width: 20px;
             height: 20px;
             background-color: var(--brownSub1);

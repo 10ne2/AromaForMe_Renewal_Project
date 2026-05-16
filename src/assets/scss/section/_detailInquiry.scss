@@ -1,0 +1,106 @@
+#detailInquiry {
+    width: 100vw;
+}
+
+.detailInquiry__inner {
+    @include center60;
+
+    .detailInquiry__top {
+        margin-top: 100px;
+        background-color: var(--brownMain);
+        padding: 40px 50px;
+        text-align: center;
+
+        h2 {
+            font-size: 20px;
+
+            em {
+                font-weight: 900;
+            }
+        }
+
+        button {
+            width: 160px;
+            height: 60px;
+            margin-top: 30px;
+            font-size: 30px;
+            background-color: var(--white);
+            border: 1px solid var(--black);
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+
+    .detailInquiry__list {
+        margin-top: 50px;
+
+        .check {
+            padding-bottom: 15px;
+        }
+
+        .list {
+            border-top: 2px solid var(--black200);
+            border-bottom: 2px solid var(--black200);
+
+            .item {
+                width: 100%;
+                border-bottom: 1px solid var(--black200);
+                padding: 30px 40px;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .top {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+
+                    span {
+                        display: block;
+                    }
+
+                    .state {
+                        width: 80px;
+                        background-color: var(--black400);
+                        text-align: center;
+                        height: 25px;
+                    }
+
+                    .writeId {
+                        margin-left: auto;
+                        padding-right: 20px;
+                        border-right: 1px solid var(--black300);
+                    }
+
+                    .writeDate {
+                        width: 110px;
+                        text-align: right;
+                        color: var(--black300);
+                    }
+
+                }
+
+                .body {
+                    display: flex;
+                    align-items: end;
+                    justify-content: space-between;
+
+                    .title {
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+
+                    button {
+                        width: 90px;
+                        height: 30px;
+                        font-size: 18px;
+                        background-color: var(--white);
+                        border: 1px solid var(--black100);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.category {
+    display: flex;
+    gap: 12px;
+
+    .drop {
+        border: 1px solid var(--black);
+        background-color: var(--white);
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 5px 0 5px;
+
+        span {
+            display: block;
+            font-size: 15px;
+        }
+    }
+}

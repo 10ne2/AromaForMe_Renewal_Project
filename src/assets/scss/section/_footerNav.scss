@@ -5,8 +5,7 @@
 }
 
 .footerNav__inner {
-    width: 60%;
-    margin: 0 auto;
+    @include center60;
     padding: 32px 0;
 
     .footerNav__title {

@@ -1,6 +1,5 @@
 #headerLoginNav {
-    margin: 0 auto;
-    width: 60%;
+    @include center60;
     font-size: 13px;
 }
 

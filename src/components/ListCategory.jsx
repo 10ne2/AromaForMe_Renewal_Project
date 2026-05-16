@@ -4,24 +4,13 @@ import leftArrow from "../assets/img/mainAdLeft.png"
 import rightArrow from "../assets/img/mainAdRight.png"
 
 import { boardImg, brandCate } from "../constants/listIndex"
+import MiniCategory from './common/MiniCategory'
 
 const ListCategory = () => {
   return (
     <div id='listCategory'>
       <div className="listCategory__inner">
-        <div className="listCategory__category">
-          <span>홈</span>
-          <span>▶</span>
-          <div className='drop'>
-            <span>라인별</span>
-            <span>▼</span>
-          </div>
-          <span>▶</span>
-          <div className='drop'>
-            <span>닥터타피</span>
-            <span>▼</span>
-          </div>
-        </div>
+        <MiniCategory />
         <div className="listCategory__brand">
           <div className="cate">
             <h2>닥터티피</h2>

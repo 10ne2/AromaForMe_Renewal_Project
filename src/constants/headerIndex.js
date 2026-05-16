@@ -5,6 +5,10 @@ export const loginNav = {
   nav: ["로그인", "회원가입", "주문조회", "마이페이지", "고객센터", "KOREAN", "ENGLISH"]
 }
 
+export const mainNav = [
+    "유형별", "고민별", "라인별", "프로모션", "이벤트", "허브이야기",
+]
+
 export const searchText = [
     {
         num: "1",

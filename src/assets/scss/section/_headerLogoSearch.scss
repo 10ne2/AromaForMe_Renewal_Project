@@ -1,6 +1,5 @@
 #headerLogoSearch {
-    margin: 0 auto;
-    width: 60%;
+    @include center60;
     font-size: 13px;
 }
 
@@ -72,7 +71,7 @@
                     .recentList{
                         margin: 0 15px 10px 15px;
                         
-                        li {
+                        .recentItem {
                             display: flex;
                             align-items: center;
                             justify-content: start;

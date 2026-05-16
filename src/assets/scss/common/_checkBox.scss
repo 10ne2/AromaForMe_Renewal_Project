@@ -1,0 +1,31 @@
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    .checkBox {
+        width: 26px;
+        height: 26px;
+        border: 1px solid var(--black);
+        position: relative;
+
+        &::after {
+            content: "";
+            @include position-center;
+            width: 16px;
+            height: 16px;
+            background-color: var(--black);
+            transform: scale(0);
+        }
+
+    }
+
+    input:checked+.checkBox::after {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

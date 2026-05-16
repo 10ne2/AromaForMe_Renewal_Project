@@ -1,6 +1,5 @@
 #listPopu {
-    width: 60%;
-    margin: 0 auto;
+    @include center60;
     padding: 40px 0;
 }
 

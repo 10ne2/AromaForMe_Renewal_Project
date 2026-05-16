@@ -34,3 +34,23 @@
     height: 100%;
     object-fit: cover;
 }
+
+// 바디 60% 중앙
+@mixin center60 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+// 라인
+@mixin line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black100);
+}
+
+// 스펜 가운데 정렬
+@mixin span-center {
+    display: block;
+    text-align: center;
+}
